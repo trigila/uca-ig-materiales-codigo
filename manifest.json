@@ -16,8 +16,8 @@
       "title": "Búsqueda de un elemento en una lista",
       "description": "Enfoque con interrupción mediante break.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "7772AE6D1F3EDB8144A3AD168DE59A89ECA04B0704EEF798552B27CEC5A57938",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "A9B6C51DDDEBD499A21BBD7E5D2D9984C2CBE9962ED93BD5834B62BBDA0A1FF3",
       "source": {
         "pre_index": 1,
         "reference": "Ejemplo 1 · NO ADMITIDO EN IG",
@@ -32,7 +32,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
         "expected_output_contains": ["Resultado: objetivo encontrado."],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
@@ -48,8 +48,8 @@
       "title": "Búsqueda de un elemento en una lista",
       "description": "Enfoque con ciclo natural y bandera.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "C84D2B9FD42395D5F529430336F3446AE2F1184FA63FDE1C8D50227F337373EC",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "89A368D50AB38425E053387EF174556B05116EEBDAEA85037B312AB7689D5A6B",
       "source": {
         "pre_index": 2,
         "reference": "Ejemplo 1 · FORMA ESPERADA EN IG",
@@ -64,7 +64,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX01_FORMA_ESPERADA.py",
         "expected_output_contains": ["Resultado: objetivo encontrado."],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX01_FORMA_ESPERADA.py",
@@ -80,8 +80,8 @@
       "title": "Validación de un monto",
       "description": "Múltiples puntos de salida.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "BB4CFE92352C07CB44D0657748A84FB1E127B6A91D3DFD8F989D40E8B01D40D1",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "5D502A7B916480C6350FBB319D8A51E0E266AC0FBBF3F5C5A512E26F608FA6E0",
       "source": {
         "pre_index": 3,
         "reference": "Ejemplo 2 · NO ADMITIDO EN IG",
@@ -95,7 +95,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX02_NO_ADMITIDO.py",
         "expected_output_contains": ["Monto de prueba: 1200", "Resultado: Excedido"],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX02_NO_ADMITIDO.py",
@@ -111,8 +111,8 @@
       "title": "Validación de un monto",
       "description": "Un único retorno al final de la función.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "BF805F29DA8915845946E5770D21AA01381315F485333050625C67B3D358AD19",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "116E6FE8B2361492E3B4BEA51E8E5B0FE88B7DA769D03F3EC45CCD630455E08E",
       "source": {
         "pre_index": 4,
         "reference": "Ejemplo 2 · FORMA ESPERADA EN IG",
@@ -126,7 +126,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX02_FORMA_ESPERADA.py",
         "expected_output_contains": ["Monto de prueba: 1200", "Resultado: Excedido"],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX02_FORMA_ESPERADA.py",
@@ -142,8 +142,8 @@
       "title": "Comprobación de un rango",
       "description": "Encadenamiento implícito.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "B95232B55B045212F95BC7CA55A8A3E38C7A339D0FBF6A952E167918322BA0EB",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "C5ACD0313EF216E71AF0D49FCE28B527C1F4C8967573AA812EFBDE853F20447A",
       "source": {
         "pre_index": 5,
         "reference": "Ejemplo 3 · NO ADMITIDO EN IG",
@@ -158,7 +158,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX03_NO_ADMITIDO.py",
         "expected_output_contains": ["Valor de prueba: 15", "Dentro del rango"],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX03_NO_ADMITIDO.py",
@@ -174,8 +174,8 @@
       "title": "Comprobación de un rango",
       "description": "Operadores lógicos explícitos.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
-      "content_sha256": "2A54529A54597B9A81D37F101915AB3BF948C71C44FBB12D93F0C284B9F3BF55",
+      "validation_status": "actualizado_localmente_y_ejecucion_verificada_pendiente_de_publicacion",
+      "content_sha256": "E4895D4BD9A091AB80AEE068FDA0190241E76ECE571C72971AD4ECC8A5189EBD",
       "source": {
         "pre_index": 6,
         "reference": "Ejemplo 3 · FORMA ESPERADA EN IG",
@@ -190,7 +190,7 @@
         "command": "python CODIGOS/IG.A.02/IG.A.02_EX03_FORMA_ESPERADA.py",
         "expected_output_contains": ["Valor de prueba: 15", "Dentro del rango"],
         "last_validation": "ejecutado_localmente_sin_excepciones",
-        "validated_at": "2026-11-09T22:57:26-03:00"
+        "validated_at": "2026-11-10T00:14:51-03:00"
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX03_FORMA_ESPERADA.py",
