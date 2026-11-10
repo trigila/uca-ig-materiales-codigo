@@ -6,7 +6,7 @@ import re
 from pathlib import Path
 
 NAME_PATTERN = re.compile(
-    r"^IG\.A\.\d{2}_EX\d{2,}_(?:ESPERADO|NO_ADMITIDO|ALTERNATIVA)(?:_\d+)?\.py$"
+    r"^IG\.A\.\d{2}_EX\d{2,}_(?:FORMA_ESPERADA|NO_ADMITIDO|ALTERNATIVA)(?:_\d+)?\.py$"
 )
 PRE_PATTERN = re.compile(r"<pre\b[^>]*>(.*?)</pre>", re.DOTALL | re.IGNORECASE)
 

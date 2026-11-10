@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="X.Y" name="document-version"/>
+<meta content="AAAA-MM-DDTHH:MM:00-03:00" name="last-modified"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Informática General | Plantilla de material de apoyo</title>
+<!--
+      PLANTILLA DE MATERIAL DE APOYO — INFORMÁTICA GENERAL
+      Archivo autónomo: incluye CSS e imagen institucional embebidos.
+      Para reutilizarlo: actualizar código IG.A.NN, título, versión y fecha/hora
+      en el encabezado, pie, metadatos y las reglas @page de impresión.
+      Impresión recomendada: Chrome/Edge, A4, escala 100%, gráficos de fondo,
+      y desactivar cabeceras/pies automáticos del navegador.
+    -->
+<style>
+        :root {
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --primary: #0f172a;
+            --accent: #2563eb;
+            --accent-bg: #eff6ff;
+            --border: #cbd5e1;
+            --code-bg: #1e1e1e;
+            --code-text: #f8fcf8;
+            --prohibido: #dc2626;
+            --prohibido-bg: #fef2f2;
+            --permitido: #16a34a;
+            --permitido-bg: #f0fdf4;
+            --highlight-text: #000000;
+            --highlight-bg: #fff7ed;
+            --highlight-border: #f97316;
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            max-width: 100%;
+            overflow-x: clip;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+            min-width: 0;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.25rem;
+            border-bottom: 3px solid var(--primary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 0.25rem;
+        }
+
+        h3 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        p,
+        li {
+            font-size: 1.05rem;
+        }
+
+        ul {
+            padding-left: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* ALTO CONTRASTE PARA TÉRMINOS CLAVE EN EL TEXTO */
+        .keyword {
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: #e2e8f0;
+            /* Fondo gris oscuro para legibilidad */
+            color: #000000;
+            /* Texto negro puro para contraste máximo (cumple WCAG AAA) */
+            padding: 0.2rem 0.4rem;
+            border-radius: 4px;
+            font-weight: 700;
+            /* Negrita para mayor peso visual */
+            border: 1px solid #94a3b8;
+        }
+
+        .destacado-bloque {
+            background-color: var(--highlight-bg);
+            border-left: 5px solid var(--highlight-border);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+
+        .destacado-bloque p {
+            margin: 0;
+            font-weight: 500;
+        }
+
+        table {
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            border-collapse: collapse;
+            table-layout: fixed;
+            margin: 1.5rem 0;
+            font-size: 1rem;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--border);
+            padding: 1rem;
+            vertical-align: top;
+            width: 50%;
+            min-width: 0;
+            overflow-wrap: break-word;
+        }
+
+        th {
+            background-color: var(--primary);
+            color: #1e293b;
+            font-weight: 600;
+            text-align: left;
+        }
+
+        .td-prohibido {
+            background-color: var(--prohibido-bg);
+        }
+
+        .td-permitido {
+            background-color: var(--permitido-bg);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-prohibido {
+            background-color: var(--prohibido);
+            color: #ffffff;
+        }
+
+        .badge-permitido {
+            background-color: var(--permitido);
+            color: #ffffff;
+        }
+
+        pre {
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 1rem;
+            border-radius: 6px;
+            width: 100%;
+            max-width: 100%;
+            min-width: 0;
+            overflow: hidden;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            tab-size: 4;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.95rem;
+            margin: 0.5rem 0 0 0;
+        }
+
+        .comment {
+            color: #6a9955;
+        }
+
+        .keyword-py {
+            color: #569cd6;
+            font-weight: bold;
+        }
+
+        .string-py {
+            color: #ce9178;
+        }
+
+        .number-py {
+            color: #b5cea8;
+        }
+
+        .document-meta {
+            color: #64748b;
+            font-size: 0.85rem;
+            margin: 0.4rem 0 1.25rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: #64748b;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            padding-top: 1rem;
+        }
+
+        @page {
+            size: A4;
+            margin: 13mm 12mm 15mm;
+        }
+
+        @media print {
+            html,
+            body {
+                width: auto;
+                min-width: 0;
+                background: #fff;
+                margin: 0;
+                padding: 0;
+                overflow: visible;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .container {
+                width: 100%;
+                box-shadow: none;
+                padding: 0;
+                max-width: none;
+                border-radius: 0;
+            }
+
+            table {
+                width: 100%;
+                max-width: 100%;
+                table-layout: fixed;
+            }
+
+            th,
+            td {
+                min-width: 0;
+                padding: 0.75rem;
+            }
+
+            pre {
+                max-width: 100%;
+                overflow: hidden;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            tr,
+            .destacado-bloque,
+            footer {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            h1,
+            h2,
+            h3 {
+                break-after: avoid-page;
+                page-break-after: avoid;
+            }
+
+            th,
+            td,
+            .badge,
+            .destacado-bloque,
+            .keyword,
+            .keyword-py,
+            .string-py,
+            .number-py,
+            .comment {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+/* Identidad visual IG · 2026: conserva los contenidos y ejemplos originales */
+:root { --bg-color:#edf2f8; --text-color:#263447; --primary:#173f78; --accent:#1768b5; --accent-bg:#eaf3fd; --border:#d7e0ec; --code-bg:#17212e; --code-text:#f5f8fd; --highlight-bg:#fff9eb; --highlight-border:#d58b24; }
+body { background:var(--bg-color); padding:2.25rem 1rem; line-height:1.62; }
+.container { max-width:930px; padding:0 2.75rem 2rem; overflow:hidden; box-shadow:0 16px 48px rgba(24,54,96,.10); border:1px solid #dce5f0; }
+.ig-header { margin:0 -2.75rem 0; background:#fff; }
+.ig-header-top { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:1.25rem 2.75rem; }
+.ig-brand { display:flex; align-items:center; gap:.85rem; min-width:0; }
+.ig-monogram { display:inline-flex; align-items:center; justify-content:center; background:#173f78; color:#fff; font-weight:800; letter-spacing:-.06em; font-size:1.55rem; width:55px; height:55px; border-radius:13px; flex-shrink:0; }
+.ig-brand-name { display:block; color:#173f78; font-size:.96rem; letter-spacing:.065em; font-weight:800; line-height:1.25; }
+.ig-brand-sub { display:block; color:#61738b; font-size:.77rem; margin-top:.25rem; }
+.uca-logo img { display:block; width:137px; height:auto; max-width:100%; }
+.ig-header-bottom { background:#173f78; color:#fff; padding:.55rem 2.75rem; display:flex; justify-content:space-between; gap:1rem; font-size:.66rem; font-weight:700; letter-spacing:.065em; }
+.ig-document-heading { padding:2.1rem 0 1.45rem; border-bottom:1px solid #d7e0ec; margin-bottom:1.5rem; }
+.ig-eyebrow { display:flex; align-items:center; gap:.7rem; font-size:.73rem; font-weight:800; letter-spacing:.11em; color:#64748b; }
+.ig-doc-code { background:#e8f1fc; color:#173f78; padding:.35rem .6rem; border-radius:5px; letter-spacing:.04em; }
+h1 { border:0; padding:0; margin:.8rem 0 .5rem; color:#173f78; font-size:2.05rem; letter-spacing:-.035em; line-height:1.18; }
+.ig-lead { color:#55677c; margin:.5rem 0 1rem; font-size:1.03rem; }
+.ig-metadata { display:flex; flex-wrap:wrap; gap:.4rem 1.25rem; color:#62758c; font-size:.79rem; }
+.ig-metadata span + span::before { content:'·'; margin-right:1.25rem; color:#9aacc1; }
+h2 { color:#173f78; font-size:1.37rem; margin-top:2.15rem; border-bottom:1px solid #dce5f0; padding-bottom:.42rem; letter-spacing:-.015em; }
+h3 { color:#1768b5; font-size:1.12rem; }
+p,li { font-size:1rem; }
+.destacado-bloque { background:#fff8e9; border-left-color:#d58b24; border-radius:0 8px 8px 0; }
+table { border:1px solid #d8e2ee; border-radius:7px; font-size:.95rem; }
+th,td { border-color:#d8e2ee; padding:.85rem; }
+th { color:#233c59; background:#f1f5fa; }
+.td-prohibido { background:#fff4f4; }
+.td-permitido { background:#effaf4; }
+.badge { font-size:.7rem; letter-spacing:.035em; border-radius:5px; padding:.28rem .5rem; }
+.badge-prohibido { background:#b52d36; }
+.badge-permitido { background:#16734a; }
+pre { font-size:.85rem; line-height:1.5; border-radius:6px; }
+.keyword { color:#173f78; background:#e8f1fc; border-color:#b9cfe8; }
+footer { display:flex; align-items:center; justify-content:space-between; gap:1rem; font-size:.72rem; color:#63748a; text-align:left; margin-top:2.6rem; }
+footer strong { color:#173f78; }
+@media(max-width:650px) { body {padding:0;} .container {border-radius:0; padding:0 1.1rem 1.5rem;} .ig-header {margin:0 -1.1rem;} .ig-header-top {padding:1rem 1.1rem;} .ig-header-bottom {padding:.6rem 1.1rem; font-size:.55rem;} .uca-logo img {width:95px;} .ig-monogram {width:44px;height:44px;font-size:1.2rem;} .ig-brand-name {font-size:.75rem;} .ig-brand-sub {font-size:.64rem;} h1 {font-size:1.7rem;} .ig-metadata span + span::before {margin-right:.45rem;} th,td {padding:.45rem;} pre {font-size:.72rem;padding:.55rem;} footer {flex-wrap:wrap;} }
+@media print {
+ @page { size:A4; margin:13mm 12mm 15mm; }
+ html,body { background:#fff !important; width:auto; margin:0; padding:0; overflow:visible; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+ .container { padding:0; margin:0; width:100%; max-width:none; border:0; box-shadow:none; overflow:visible; }
+ .ig-header { margin:0; }
+ .ig-header-top { padding:.65rem .2rem; }
+ .ig-header-bottom { padding:.45rem .65rem; }
+ .ig-document-heading { padding:1.2rem 0 .85rem; margin-bottom:1rem; }
+ h1 { font-size:1.7rem; }
+ h2 {font-size:1.18rem; margin-top:1.4rem;}
+ h3 {font-size:1rem;}
+ p,li {font-size:.9rem;}
+ table { break-inside:avoid; page-break-inside:avoid; width:100%; table-layout:fixed; margin:1rem 0; }
+ th,td {padding:.55rem;}
+ pre {font-size:.72rem; break-inside:avoid;page-break-inside:avoid;}
+ tr,.destacado-bloque,footer {break-inside:avoid;page-break-inside:avoid;}
+ h1,h2,h3 {break-after:avoid-page;page-break-after:avoid;}
+ .ig-header,.ig-document-heading,table,th,td,pre,.badge,.keyword,.destacado-bloque { -webkit-print-color-adjust:exact;print-color-adjust:exact; }
+}
+
+    
+/* Identidad documental IG — cabeceras y pies de impresión A4. */
+footer {
+  border-top: 2px solid #173f78;
+  padding: .85rem .2rem 0;
+  color: #173f78;
+  font-weight: 500;
+}
+footer strong { color: #173f78; font-weight: 800; }
+@media print {
+  /* Los márgenes reservan espacio para la cabecera y el pie repetidos. */
+  @page {
+    size: A4;
+    margin: 19mm 12mm 19mm;
+    @top-left {
+      content: "IG  ·  INFORMÁTICA GENERAL  ·  UCA";
+      color: #173f78;
+      font: 700 8pt Arial, sans-serif;
+      border-bottom: .7pt solid #c7d8ec;
+      padding-bottom: 2mm;
+    }
+    @top-right {
+      content: "MATERIAL DE APOYO  ·  IG.A.NN";
+      color: #59718d;
+      font: 600 7.5pt Arial, sans-serif;
+      border-bottom: .7pt solid #c7d8ec;
+      padding-bottom: 2mm;
+    }
+    @bottom-left {
+      content: "IG  ·  INFORMÁTICA GENERAL  ·  UCA";
+      color: #173f78;
+      font: 700 7.5pt Arial, sans-serif;
+      border-top: 1.3pt solid #173f78;
+      padding-top: 2.3mm;
+    }
+    @bottom-center {
+      content: "IG.A.NN  ·  vX.Y  ·  DD/MM/AAAA — HH:MM h";
+      color: #61738b;
+      font: 7.5pt Arial, sans-serif;
+      border-top: 1.3pt solid #173f78;
+      padding-top: 2.3mm;
+    }
+    @bottom-right {
+      content: "PÁG. " counter(page) " / " counter(pages);
+      color: #173f78;
+      font: 700 7.5pt Arial, sans-serif;
+      border-top: 1.3pt solid #173f78;
+      padding-top: 2.3mm;
+    }
+  }
+  @page :first {
+    margin-top: 12mm;
+    @top-left { content: none; border: 0; }
+    @top-right { content: none; border: 0; }
+  }
+  footer { display: none !important; }
+  table { break-inside: avoid; page-break-inside: avoid; }
+}
+
+    
+
+/* ===============================================================
+   ELEMENTOS REUTILIZABLES DE LA PLANTILLA IG
+   Conservar la identidad y los @page del diseño original.
+   =============================================================== */
+.ig-placeholder { color: #687b92; font-style: italic; }
+.ig-figure { margin:1.55rem 0; break-inside:avoid; page-break-inside:avoid; }
+.ig-figure-area { min-height:160px; border:2px dashed #b5c8df; background:#f4f8fd; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:.55rem; text-align:center; padding:1.3rem; color:#59718d; }
+.ig-figure-symbol { font-size:1.9rem; line-height:1; color:#173f78; font-weight:800; }
+.ig-figure-area strong {font-size:.96rem; color:#173f78;}
+.ig-figure-area small {font-size:.78rem; max-width:420px; line-height:1.5;}
+.ig-figure figcaption { margin-top:.5rem; color:#62758c; font-size:.83rem; text-align:center; }
+.ig-figure img { display:block; max-width:100%; height:auto; margin:auto; border-radius:6px; }
+.ig-table { border-radius:4px; }
+.ig-table th { background:#eaf1f9; color:#173f78; }
+.ig-table th,.ig-table td { width:auto; }
+.ig-two-col th,.ig-two-col td { width:50%; }
+.ig-badge-a { background:#537395; color:#fff; }
+.ig-badge-b { background:#1768b5; color:#fff; }
+.ig-two-col th:first-child,.ig-two-col td:first-child { background:#f4f7fb; }
+.ig-two-col th:last-child,.ig-two-col td:last-child { background:#edf5fc; }
+.ig-rule { border:0; border-top:1px solid #d7e0ec; margin:1.4rem 0; }
+.ig-references { padding-left:1.45rem; }
+.ig-references li { margin-bottom:.4rem; }
+.ig-instructions { margin:0 0 1.4rem; border-left:4px solid #7a9ec8; background:#f0f6fd; padding:.85rem 1rem; font-size:.86rem; color:#435d7b; border-radius:0 5px 5px 0; }
+.ig-instructions strong { color:#173f78; }
+@media print {
+  .ig-figure,.ig-figure-area,.ig-instructions { break-inside:avoid; page-break-inside:avoid; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .ig-figure-area { min-height:105px; }
+  .ig-instructions { padding:.65rem .85rem; }
+  .ig-table,.ig-two-col {break-inside:avoid; page-break-inside:avoid;}
+}
+
+/* ===============================================================
+   IDENTIDAD IG/UCA — JERARQUÍA INSTITUCIONAL DE CABECERA
+   El tipo de material depende de IG y la Facultad depende de UCA.
+   =============================================================== */
+.ig-brand-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+.ig-brand-doc {
+    display: block;
+    margin-top: .42rem;
+    color: #173f78;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: .085em;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.uca-block {
+    width: 290px;
+    max-width: 42%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: .48rem;
+    text-align: right;
+}
+.uca-faculty {
+    display: block;
+    color: #596d88;
+    font-size: .70rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: .016em;
+    text-transform: uppercase;
+}
+.ig-header-bottom {
+    height: 12px;
+    min-height: 12px;
+    padding: 0;
+    background: #173f78;
+}
+@media (max-width: 650px) {
+    .ig-header-top { gap: .7rem; }
+    .ig-brand-doc { font-size: .58rem; margin-top: .28rem; }
+    .uca-block { max-width: 43%; gap: .24rem; }
+    .uca-faculty { font-size: .53rem; letter-spacing: 0; }
+    .ig-header-bottom { height: 9px; min-height: 9px; padding: 0; }
+}
+@media print {
+    .ig-header-top { align-items: center; }
+    .ig-brand-doc { font-size: .66rem; margin-top: .28rem; }
+    .uca-block { width: 268px; max-width: 42%; gap: .3rem; }
+    .uca-faculty { font-size: .60rem; line-height: 1.25; }
+    .ig-header-bottom { height: 9px; min-height: 9px; padding: 0; }
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+<header class="ig-header">
+  <div class="ig-header-top">
+    <div class="ig-brand">
+      <span class="ig-monogram">IG</span>
+      <div class="ig-brand-text">
+        <span class="ig-brand-name">INFORMÁTICA GENERAL</span>
+        <span class="ig-brand-sub">Cátedra · Ciclo común de Ingeniería</span>
+        <span class="ig-brand-doc">MATERIAL DE APOYO</span>
+      </div>
+    </div>
+    <div class="uca-block">
+      <div class="uca-logo"><img alt="Pontificia Universidad Católica Argentina - UCA" src="data:image/jpeg;base64,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" /></div>
+      <span class="uca-faculty">FACULTAD DE INGENIERÍA Y CIENCIAS AGRARIAS</span>
+    </div>
+  </div>
+  <div class="ig-header-bottom" aria-hidden="true"></div>
+</header>
+<div class="ig-document-heading">
+<div class="ig-eyebrow"><span class="ig-doc-code">IG.A.NN</span><span>[TIPO DE DOCUMENTO]</span></div>
+<h1>[Título del documento]</h1>
+<p class="ig-lead">[Subtítulo breve que describa el propósito del material]</p>
+<div class="ig-metadata"><span>Versión X.Y</span><span>Última modificación: DD/MM/AAAA — HH:MM h</span></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ============================================================
+     GUÍA DE USO DE ESTA PLANTILLA
+     1) Guardar una copia con el nombre: IG.A.NN_Titulo_vX.Y.html.
+     2) Reemplazar IG.A.NN, título, subtítulo, versión y fecha/hora
+        en: (a) encabezado visible, (b) footer HTML, (c) metadatos
+        del HEAD y (d) las reglas @page @top-right y @bottom-center.
+     3) Reemplazar el texto entre [corchetes] por el propio contenido.
+     4) Eliminar los bloques que no se utilicen (tablas, figura, etc.).
+     5) Para agregar imágenes, reemplazar el interior de .ig-figure-area
+        por: <img src="imagenes/figura01.png" alt="Descripción" />.
+        Para un HTML autónomo, incorporar la imagen en base64 (data URI).
+     6) Imprimir: Chrome/Edge -> A4 -> escala 100 % -> gráficos
+        de fondo activados -> encabezados/pies del navegador desactivados.
+     7) Verificar que imágenes, tablas y bloques de código no se corten.
+     8) No modificar el logo institucional ni las reglas @page,
+        salvo los datos de identificación del documento.
+     ============================================================ -->
+<!-- Eliminar este aviso cuando el documento esté completo. -->
+<div class="ig-instructions"><strong>PLANTILLA DE EDICIÓN · </strong> Los textos entre corchetes indican qué completar. Esta página contiene ejemplos de elementos disponibles; conservá solo los que necesites.</div>
+<!-- PRESENTACIÓN / RESUMEN -->
+<p class="ig-placeholder">[Párrafo de presentación: explicar el tema, a quién está dirigido y qué encontrará el lector en el documento.]</p>
+<!-- NIVEL 1 DE ORGANIZACIÓN: TÍTULO DE SECCIÓN -->
+<h2>1. [Título de la primera sección]</h2>
+<p class="ig-placeholder">[Desarrollar aquí la introducción, el contexto o los fundamentos principales del tema. Usar párrafos breves y claros.]</p>
+<!-- RECUADRO DESTACADO: mantener para definiciones, pautas o advertencias -->
+<div class="destacado-bloque"><p>[Concepto clave, criterio importante, recomendación o advertencia que conviene destacar.]</p></div>
+<!-- LISTA DE IDEAS / OBJETIVOS -->
+<p class="ig-placeholder">[Texto opcional para introducir una enumeración.]</p>
+<ul>
+<li>[Primer concepto, objetivo o característica.]</li>
+<li>[Segundo concepto, objetivo o característica.]</li>
+<li>[Tercer concepto, objetivo o característica.]</li>
+</ul>
+<!-- TÍTULO DE SECCIÓN Y SUBTÍTULO -->
+<h2>2. [Título de la segunda sección]</h2>
+<p class="ig-placeholder">[Explicación del tema o desarrollo de un procedimiento.]</p>
+<h3>2.1. [Subtítulo o apartado específico]</h3>
+<p class="ig-placeholder">[Ampliación, explicación paso a paso, definición o ejemplo conceptual.]</p>
+<!-- FIGURA: reemplazar recuadro por una etiqueta img real -->
+<figure class="ig-figure">
+<div class="ig-figure-area"><span class="ig-figure-symbol">▧</span><strong>[Imagen, diagrama o captura de pantalla]</strong><small>[Reemplazar este recuadro por &lt;img src="..." alt="..."&gt;. La figura se adapta al ancho de página.]</small></div>
+<figcaption>Figura 1. [Título o descripción de la imagen. Indicar fuente si corresponde.]</figcaption>
+</figure>
+<!-- TABLA GENERAL: duplicar / eliminar filas y columnas según necesidad -->
+<h2>3. [Sección con tabla informativa]</h2>
+<p class="ig-placeholder">[Explicar qué información se presenta y cómo debe interpretarse.]</p>
+<table class="ig-table">
+<thead><tr><th>[Encabezado de columna 1]</th><th>[Encabezado de columna 2]</th></tr></thead>
+<tbody>
+<tr><td>[Dato o concepto A]</td><td>[Descripción, característica o explicación A]</td></tr>
+<tr><td>[Dato o concepto B]</td><td>[Descripción, característica o explicación B]</td></tr>
+</tbody>
+</table>
+<!-- CÓDIGO: reemplazar comentario por un fragmento de código real.
+     Usar &lt; y &gt; al editar expresiones que contienen < y >. -->
+<h2>4. [Sección con ejemplo de código]</h2>
+<p class="ig-placeholder">[Presentar el objetivo del ejemplo y las ideas que se desean explicar.]</p>
+<h3>Ejemplo 1. [Nombre del ejemplo]</h3>
+<pre><code><span class="comment"># [Incorporar aquí el código de ejemplo]</span>
+<span class="comment"># [Mantener la indentación del lenguaje]</span></code></pre>
+<p class="ig-placeholder">[Explicar qué demuestra el código y cuál es el resultado esperado.]</p>
+<!-- COMPARACIÓN: elemento opcional para contrastar enfoques. -->
+<h2>5. [Sección de comparación — opcional]</h2>
+<h3>[Título de la comparación]</h3>
+<table class="ig-two-col">
+<thead><tr><th><span class="badge ig-badge-a">ALTERNATIVA A</span> [Título A]</th><th><span class="badge ig-badge-b">ALTERNATIVA B</span> [Título B]</th></tr></thead>
+<tbody><tr><td>[Explicación, imagen o código de la primera alternativa.]</td><td>[Explicación, imagen o código de la segunda alternativa.]</td></tr></tbody>
+</table>
+<!-- CIERRE -->
+<h2>Conclusión</h2>
+<p class="ig-placeholder">[Síntesis de las ideas principales, resultados o recomendaciones finales. Evitar incorporar aquí temas nuevos.]</p>
+<!-- REFERENCIAS OPCIONALES: quitar la sección cuando no corresponda. -->
+<h2>Referencias y recursos [opcional]</h2>
+<ol class="ig-references">
+<li>[Autor o institución. Título del recurso. Año. URL o referencia bibliográfica.]</li>
+<li>[Agregar aquí otros documentos de la cátedra, fuentes, enlaces o materiales complementarios.]</li>
+</ol>
+<!-- Este footer se ve en pantalla; en impresión se reemplaza por @page -->
+<footer><span><strong>IG</strong> · INFORMÁTICA GENERAL · UCA</span><span>IG.A.NN · Versión X.Y · DD/MM/AAAA — HH:MM h</span></footer>
+</div>
+</body>
+</html>

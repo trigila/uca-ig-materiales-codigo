@@ -8,7 +8,7 @@
     "view_template": "https://github.com/{owner}/{repository}/blob/{branch}/{path}",
     "download_strategy": "github_release_asset",
     "download_template": "https://github.com/{owner}/{repository}/releases/download/{release_tag}/{filename}",
-    "download_note": "Validada con el asset de la Release prueba-ex01: adjunto con nombre y bytes correctos."
+    "download_note": "El asset de la Release prueba-ex01 fue validado con el nombre y los bytes correctos. Los demás enlaces se completan solo después de su publicación y validación."
   },
   "html": {
     "anchor_class": "ig-code-download",

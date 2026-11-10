@@ -4,7 +4,7 @@
     "name": "uca-ig-materiales-codigo",
     "branch": "main",
     "owner": "trigila",
-    "publication_status": "initial_test"
+    "publication_status": "integracion_local_pendiente_de_push"
   },
   "entries": [
     {
@@ -12,11 +12,11 @@
       "example_id": "EX01",
       "variant": "NO_ADMITIDO",
       "file_name": "IG.A.02_EX01_NO_ADMITIDO.py",
-      "relative_path": "IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
       "title": "Búsqueda de un elemento en una lista",
       "description": "Enfoque con interrupción mediante break.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "local_validated",
+      "validation_status": "publicado_en_prueba",
       "content_sha256": "5AE36510CA4AF1EA64304868629BF6306B94B176D4767F1DB5AF73F032C70A7C",
       "source": {
         "pre_index": 1,
@@ -25,9 +25,104 @@
         "dependencies": ["lista"]
       },
       "links": {
-        "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
+        "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
         "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/prueba-ex01/IG.A.02_EX01_NO_ADMITIDO.py"
       }
+    },
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX01",
+      "variant": "FORMA_ESPERADA",
+      "file_name": "IG.A.02_EX01_FORMA_ESPERADA.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX01_FORMA_ESPERADA.py",
+      "title": "Búsqueda de un elemento en una lista",
+      "description": "Enfoque con ciclo natural y bandera.",
+      "academic_classification": "FORMA_ESPERADA",
+      "validation_status": "local_validated",
+      "content_sha256": "4F51807718DE0AD1C3131F8908F3DCB8A958BC5A4FEF55D11D64950AECA9D221",
+      "source": {
+        "pre_index": 2,
+        "reference": "Ejemplo 1 · FORMA ESPERADA EN IG",
+        "execution_classification": "fragmento_sintacticamente_valido_requiere_contexto",
+        "dependencies": ["lista"]
+      },
+      "links": {"view": null, "download": null}
+    },
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX02",
+      "variant": "NO_ADMITIDO",
+      "file_name": "IG.A.02_EX02_NO_ADMITIDO.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX02_NO_ADMITIDO.py",
+      "title": "Validación de un monto",
+      "description": "Múltiples puntos de salida.",
+      "academic_classification": "NO_ADMITIDO",
+      "validation_status": "local_validated",
+      "content_sha256": "E2EF4634BC14094CC4630D604126851B20E97291318171F57CEBF9758C93EB75",
+      "source": {
+        "pre_index": 3,
+        "reference": "Ejemplo 2 · NO ADMITIDO EN IG",
+        "execution_classification": "funcion_ejecutable",
+        "dependencies": []
+      },
+      "links": {"view": null, "download": null}
+    },
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX02",
+      "variant": "FORMA_ESPERADA",
+      "file_name": "IG.A.02_EX02_FORMA_ESPERADA.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX02_FORMA_ESPERADA.py",
+      "title": "Validación de un monto",
+      "description": "Un único retorno al final de la función.",
+      "academic_classification": "FORMA_ESPERADA",
+      "validation_status": "local_validated",
+      "content_sha256": "AA6AB884BB29D33390014533C930A90D6A458E02F9F35D87971002955368996F",
+      "source": {
+        "pre_index": 4,
+        "reference": "Ejemplo 2 · FORMA ESPERADA EN IG",
+        "execution_classification": "funcion_ejecutable",
+        "dependencies": []
+      },
+      "links": {"view": null, "download": null}
+    },
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX03",
+      "variant": "NO_ADMITIDO",
+      "file_name": "IG.A.02_EX03_NO_ADMITIDO.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX03_NO_ADMITIDO.py",
+      "title": "Comprobación de un rango",
+      "description": "Encadenamiento implícito.",
+      "academic_classification": "NO_ADMITIDO",
+      "validation_status": "local_validated",
+      "content_sha256": "8980D839A3E2F7DB7F97E9C99C4B4873A955E17D902BCEA9B79628833FB7FE0B",
+      "source": {
+        "pre_index": 5,
+        "reference": "Ejemplo 3 · NO ADMITIDO EN IG",
+        "execution_classification": "fragmento_sintacticamente_valido_requiere_contexto",
+        "dependencies": ["x"]
+      },
+      "links": {"view": null, "download": null}
+    },
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX03",
+      "variant": "FORMA_ESPERADA",
+      "file_name": "IG.A.02_EX03_FORMA_ESPERADA.py",
+      "relative_path": "CODIGOS/IG.A.02/IG.A.02_EX03_FORMA_ESPERADA.py",
+      "title": "Comprobación de un rango",
+      "description": "Operadores lógicos explícitos.",
+      "academic_classification": "FORMA_ESPERADA",
+      "validation_status": "local_validated",
+      "content_sha256": "6B138A7541FD0195157A401111229381FDC2BF3ED83DC94C7BAEEDCC8770632D",
+      "source": {
+        "pre_index": 6,
+        "reference": "Ejemplo 3 · FORMA ESPERADA EN IG",
+        "execution_classification": "fragmento_sintacticamente_valido_requiere_contexto",
+        "dependencies": ["x"]
+      },
+      "links": {"view": null, "download": null}
     }
   ]
 }

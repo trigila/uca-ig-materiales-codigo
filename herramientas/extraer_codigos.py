@@ -10,7 +10,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Extrae bloques <pre> de un HTML según manifest.json.")
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--html", type=Path, required=True)
-    parser.add_argument("--root", type=Path, required=True, help="Raíz del repositorio de códigos.")
+    parser.add_argument("--root", type=Path, required=True, help="Raíz del repositorio.")
     parser.add_argument("--document-code", required=True)
     parser.add_argument("--write", action="store_true", help="Escribe archivos; sin esta opción solo informa diferencias.")
     args = parser.parse_args()
