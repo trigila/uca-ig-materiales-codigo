@@ -45,7 +45,9 @@ def main() -> int:
             raise SystemExit(f"pre_index inválido para {entry['file_name']}.")
         anchor = (
             f'\n<a class="{html.escape(anchor_class, quote=True)}" '
-            f'href="{html.escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">'
+            f'href="{html.escape(url, quote=True)}" '
+            f'download="{html.escape(entry["file_name"], quote=True)}" '
+            f'target="_blank" rel="noopener noreferrer">'
             f'{html.escape(anchor_text)}</a>'
         )
         block = blocks[index - 1]

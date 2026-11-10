@@ -4,7 +4,7 @@
     "name": "uca-ig-materiales-codigo",
     "branch": "main",
     "owner": "trigila",
-    "publication_status": "correccion_autonoma_publicada_y_verificada"
+    "publication_status": "publicacion_en_main_con_enlaces_permanentes"
   },
   "entries": [
     {
@@ -36,7 +36,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX01_NO_ADMITIDO.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py"
       }
     },
     {
@@ -68,7 +68,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX01_FORMA_ESPERADA.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX01_FORMA_ESPERADA.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX01_FORMA_ESPERADA.py"
       }
     },
     {
@@ -99,7 +99,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX02_NO_ADMITIDO.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX02_NO_ADMITIDO.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX02_NO_ADMITIDO.py"
       }
     },
     {
@@ -130,7 +130,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX02_FORMA_ESPERADA.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX02_FORMA_ESPERADA.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX02_FORMA_ESPERADA.py"
       }
     },
     {
@@ -162,7 +162,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX03_NO_ADMITIDO.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX03_NO_ADMITIDO.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX03_NO_ADMITIDO.py"
       }
     },
     {
@@ -194,7 +194,7 @@
       },
       "links": {
         "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/CODIGOS/IG.A.02/IG.A.02_EX03_FORMA_ESPERADA.py",
-        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/IG.A.02_v1.3.1/IG.A.02_EX03_FORMA_ESPERADA.py"
+        "download": "https://raw.githubusercontent.com/trigila/uca-ig-materiales-codigo/main/CODIGOS/IG.A.02/IG.A.02_EX03_FORMA_ESPERADA.py"
       }
     }
   ]
