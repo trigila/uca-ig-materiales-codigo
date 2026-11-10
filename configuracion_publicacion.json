@@ -1,0 +1,16 @@
+{
+  "repository": {
+    "owner": "trigila",
+    "name": "uca-ig-materiales-codigo",
+    "branch": "main"
+  },
+  "link_generation": {
+    "view_template": "https://github.com/{owner}/{repository}/blob/{branch}/{path}",
+    "download_strategy": null,
+    "download_note": "Debe definirse solamente después de validar manualmente el método de descarga desde GitHub."
+  },
+  "html": {
+    "anchor_class": "ig-code-download",
+    "anchor_text": "Descargar código (.py)"
+  }
+}

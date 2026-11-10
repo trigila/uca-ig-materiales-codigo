@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "repository": {
+    "name": "uca-ig-materiales-codigo",
+    "branch": "main",
+    "owner": "trigila",
+    "publication_status": "initial_test"
+  },
+  "entries": [
+    {
+      "document_code": "IG.A.02",
+      "example_id": "EX01",
+      "variant": "NO_ADMITIDO",
+      "file_name": "IG.A.02_EX01_NO_ADMITIDO.py",
+      "relative_path": "IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
+      "title": "Búsqueda de un elemento en una lista",
+      "description": "Enfoque con interrupción mediante break.",
+      "academic_classification": "NO_ADMITIDO",
+      "validation_status": "local_validated",
+      "content_sha256": "5AE36510CA4AF1EA64304868629BF6306B94B176D4767F1DB5AF73F032C70A7C",
+      "source": {
+        "pre_index": 1,
+        "reference": "Ejemplo 1 · NO ADMITIDO EN IG",
+        "execution_classification": "fragmento_sintacticamente_valido_requiere_contexto",
+        "dependencies": ["lista"]
+      },
+      "links": {"view": null, "download": null}
+    }
+  ]
+}
