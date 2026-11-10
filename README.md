@@ -59,6 +59,8 @@ En una auditoría, no modificar archivos salvo que se solicite la corrección. E
 
 Esta misma carpeta es la raíz prevista del único repositorio del proyecto. Los ejemplos descargables se organizan en `CODIGOS/IG.A.NN/`; cada archivo se identifica como `IG.A.NN_EXXX_TIPO.py`, sin incorporar la versión del documento. Los tipos son `NO_ADMITIDO`, `FORMA_ESPERADA` y, cuando corresponda, `ALTERNATIVA`.
 
+Las rutas de `manifest.json` y los comandos de `herramientas/` son relativas a esta raíz (`--root .`); no se deben registrar rutas locales absolutas. Por eso el proyecto puede trasladarse de carpeta sin modificar los ejemplos ni las utilidades.
+
 El HTML académico es la fuente del contenido: los archivos `.py` conservan el bloque `pre` correspondiente y pueden completarlo solo con el contexto mínimo necesario para ejecutarse. Todo código Python ofrecido para descarga debe ser autónomo, ejecutable y estar validado mediante una ejecución real. Los fragmentos académicos deben completarse con el contexto mínimo necesario, sin alterar el concepto que ilustran. `manifest.json` registra código documental, ejemplo, variante, ubicación, procedencia, hash, ejecución y enlaces; `configuracion_publicacion.json` centraliza la configuración pública sin credenciales. Las utilidades de `herramientas/` permiten extraer, validar y preparar enlaces.
 
 Para un documento que contenga ejemplos, verificar primero sin escribir:

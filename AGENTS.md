@@ -62,6 +62,7 @@ Usar horario de Argentina (`America/Argentina/Buenos_Aires`, UTC−03:00) y obte
 ### Código descargable
 
 - Esta carpeta es la única raíz de trabajo y repositorio del proyecto. Los archivos descargables viven en `CODIGOS/IG.A.NN/`; descubrir documentos, ejemplos y enlaces a partir de `manifest.json`, no de un inventario fijo en estas instrucciones.
+- Usar en `manifest.json` y en las utilidades únicamente rutas relativas a esta raíz de trabajo (`--root .`); no registrar rutas locales absolutas para que el proyecto sea portable.
 - Mantener `IG.A.NN_EXXX_TIPO.py`, con `TIPO` igual a `NO_ADMITIDO`, `FORMA_ESPERADA` o `ALTERNATIVA`. No incluir versiones de PDF en esos nombres, no reutilizar identificadores retirados y no mover archivos publicados sin revisar las referencias.
 - Los `.py` conservan el bloque `pre` del HTML académico y pueden agregar solo el contexto mínimo necesario para funcionar como programas completos. Mantener UTF-8, cuatro espacios por nivel y ausencia de tabulaciones. No corregir silenciosamente ni convertir un ejemplo `NO_ADMITIDO` en una `FORMA_ESPERADA`.
 - Todo código Python ofrecido para descarga debe ser autónomo, ejecutable y estar validado mediante una ejecución real. Los fragmentos académicos deben completarse con el contexto mínimo necesario, sin alterar el concepto que ilustran.
