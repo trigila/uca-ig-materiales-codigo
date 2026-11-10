@@ -6,8 +6,9 @@
   },
   "link_generation": {
     "view_template": "https://github.com/{owner}/{repository}/blob/{branch}/{path}",
-    "download_strategy": null,
-    "download_note": "Debe definirse solamente después de validar manualmente el método de descarga desde GitHub."
+    "download_strategy": "github_release_asset",
+    "download_template": "https://github.com/{owner}/{repository}/releases/download/{release_tag}/{filename}",
+    "download_note": "Validada con el asset de la Release prueba-ex01: adjunto con nombre y bytes correctos."
   },
   "html": {
     "anchor_class": "ig-code-download",

@@ -24,7 +24,10 @@
         "execution_classification": "fragmento_sintacticamente_valido_requiere_contexto",
         "dependencies": ["lista"]
       },
-      "links": {"view": null, "download": null}
+      "links": {
+        "view": "https://github.com/trigila/uca-ig-materiales-codigo/blob/main/IG.A.02/IG.A.02_EX01_NO_ADMITIDO.py",
+        "download": "https://github.com/trigila/uca-ig-materiales-codigo/releases/download/prueba-ex01/IG.A.02_EX01_NO_ADMITIDO.py"
+      }
     }
   ]
 }
