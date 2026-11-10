@@ -90,6 +90,18 @@ Cuando se solicite o sea posible generarlo, renderizar con Chromium, Chrome o Ed
 - Ejecutar `herramientas/validar_enlaces.py` para comprobar enlaces configurados; usar `--check-downloads` solo cuando exista una publicación autorizada que pueda descargarse.
 - Antes de un commit o una publicación, ejecutar `herramientas/preparar_publicacion.py`. No crear commits ni hacer `push` sin instrucción expresa del usuario; antes de un `push`, informar remoto, rama y commits concretos.
 
+### Regla permanente: «commit + push»
+
+Cuando el usuario indique explícitamente `commit + push`, se considera autorización para publicar los cambios pertinentes de todo este repositorio, no solo los archivos trabajados en la última tarea. En ese caso:
+
+1. Revisar `git status` y el diff completo, incluyendo archivos nuevos, modificados, renombrados y eliminados.
+2. Validar el contenido conforme a su tipo y ejecutar las comprobaciones disponibles antes de incorporar los cambios.
+3. Incluir todos los archivos legítimos del proyecto, incluidos los documentos oficiales generados y validados; no requerir que el usuario enumere cada ruta.
+4. Excluir archivos temporales, pruebas descartadas, cachés, archivos privados, artefactos sospechosos y cualquier contenido ajeno al proyecto; informar las exclusiones.
+5. Crear un commit descriptivo en inglés, hacer `push` a `origin/main` y verificar que `main` coincida con `origin/main` y que el árbol de trabajo quede limpio.
+
+Si existe una duda fundada sobre la legitimidad, la procedencia o la seguridad de un archivo, no publicarlo y solicitar indicaciones antes de continuar.
+
 ## 7. Modo de trabajo y respuesta final
 
 - **Nuevo documento:** duplicar la plantilla técnica, completar contenido, sincronizar identificación y validar HTML; generar PDF solo si se solicita o forma parte del encargo.
