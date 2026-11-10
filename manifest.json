@@ -4,7 +4,7 @@
     "name": "uca-ig-materiales-codigo",
     "branch": "main",
     "owner": "trigila",
-    "publication_status": "correccion_autonoma_local_pendiente_de_publicacion"
+    "publication_status": "correccion_autonoma_publicada_y_verificada"
   },
   "entries": [
     {
@@ -16,7 +16,7 @@
       "title": "Búsqueda de un elemento en una lista",
       "description": "Enfoque con interrupción mediante break.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "7772AE6D1F3EDB8144A3AD168DE59A89ECA04B0704EEF798552B27CEC5A57938",
       "source": {
         "pre_index": 1,
@@ -48,7 +48,7 @@
       "title": "Búsqueda de un elemento en una lista",
       "description": "Enfoque con ciclo natural y bandera.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "C84D2B9FD42395D5F529430336F3446AE2F1184FA63FDE1C8D50227F337373EC",
       "source": {
         "pre_index": 2,
@@ -80,7 +80,7 @@
       "title": "Validación de un monto",
       "description": "Múltiples puntos de salida.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "BB4CFE92352C07CB44D0657748A84FB1E127B6A91D3DFD8F989D40E8B01D40D1",
       "source": {
         "pre_index": 3,
@@ -111,7 +111,7 @@
       "title": "Validación de un monto",
       "description": "Un único retorno al final de la función.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "BF805F29DA8915845946E5770D21AA01381315F485333050625C67B3D358AD19",
       "source": {
         "pre_index": 4,
@@ -142,7 +142,7 @@
       "title": "Comprobación de un rango",
       "description": "Encadenamiento implícito.",
       "academic_classification": "NO_ADMITIDO",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "B95232B55B045212F95BC7CA55A8A3E38C7A339D0FBF6A952E167918322BA0EB",
       "source": {
         "pre_index": 5,
@@ -174,7 +174,7 @@
       "title": "Comprobación de un rango",
       "description": "Operadores lógicos explícitos.",
       "academic_classification": "FORMA_ESPERADA",
-      "validation_status": "correccion_local_validada_pendiente_de_publicacion",
+      "validation_status": "publicado_y_descarga_y_ejecucion_verificada",
       "content_sha256": "2A54529A54597B9A81D37F101915AB3BF948C71C44FBB12D93F0C284B9F3BF55",
       "source": {
         "pre_index": 6,
