@@ -63,8 +63,9 @@ Usar horario de Argentina (`America/Argentina/Buenos_Aires`, UTC−03:00) y obte
 
 - Esta carpeta es la única raíz de trabajo y repositorio del proyecto. Los archivos descargables viven en `CODIGOS/IG.A.NN/`; descubrir documentos, ejemplos y enlaces a partir de `manifest.json`, no de un inventario fijo en estas instrucciones.
 - Mantener `IG.A.NN_EXXX_TIPO.py`, con `TIPO` igual a `NO_ADMITIDO`, `FORMA_ESPERADA` o `ALTERNATIVA`. No incluir versiones de PDF en esos nombres, no reutilizar identificadores retirados y no mover archivos publicados sin revisar las referencias.
-- Los `.py` se derivan de bloques `pre` del HTML académico. Mantener UTF-8, cuatro espacios por nivel y ausencia de tabulaciones. No corregir silenciosamente ni convertir un ejemplo `NO_ADMITIDO` en una `FORMA_ESPERADA`.
-- Registrar en el manifiesto la procedencia, dependencias, hash y clasificación de cada fragmento. No inventar datos para volver autónomo a un fragmento que requiere contexto.
+- Los `.py` conservan el bloque `pre` del HTML académico y pueden agregar solo el contexto mínimo necesario para funcionar como programas completos. Mantener UTF-8, cuatro espacios por nivel y ausencia de tabulaciones. No corregir silenciosamente ni convertir un ejemplo `NO_ADMITIDO` en una `FORMA_ESPERADA`.
+- Todo código Python ofrecido para descarga debe ser autónomo, ejecutable y estar validado mediante una ejecución real. Los fragmentos académicos deben completarse con el contexto mínimo necesario, sin alterar el concepto que ilustran.
+- Registrar en el manifiesto la procedencia, dependencias, hash, clasificación y comprobación de ejecución de cada descarga. No inventar datos ajenos al concepto académico para volver autónomo a un fragmento.
 - `configuracion_publicacion.json` no contiene credenciales. Completar enlaces reales únicamente después de publicación autorizada y verificación del archivo descargado. Para enlaces en documentos, generar una copia HTML mediante `herramientas/actualizar_enlaces_html.py`; no modificar un HTML académico aprobado solo para insertar una URL.
 
 ## 6. Verificación antes de entregar
@@ -84,7 +85,7 @@ Cuando se solicite o sea posible generarlo, renderizar con Chromium, Chrome o Ed
 ### Código y enlaces
 
 - Ejecutar `herramientas/extraer_codigos.py` sin `--write` para detectar diferencias antes de sincronizar un `.py` con su HTML.
-- Ejecutar `herramientas/validar_codigos.py` para comprobar nombres, UTF-8, ausencia de tabulaciones, sintaxis Python, hash y correspondencia con el bloque `pre`.
+- Ejecutar `herramientas/validar_codigos.py --run` para comprobar nombres, UTF-8, ausencia de tabulaciones, sintaxis Python, hash, conservación del bloque `pre` y ejecución real con salida esperada.
 - Ejecutar `herramientas/validar_enlaces.py` para comprobar enlaces configurados; usar `--check-downloads` solo cuando exista una publicación autorizada que pueda descargarse.
 - Antes de un commit o una publicación, ejecutar `herramientas/preparar_publicacion.py`. No crear commits ni hacer `push` sin instrucción expresa del usuario; antes de un `push`, informar remoto, rama y commits concretos.
 

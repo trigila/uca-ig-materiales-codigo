@@ -59,13 +59,13 @@ En una auditoría, no modificar archivos salvo que se solicite la corrección. E
 
 Esta misma carpeta es la raíz prevista del único repositorio del proyecto. Los ejemplos descargables se organizan en `CODIGOS/IG.A.NN/`; cada archivo se identifica como `IG.A.NN_EXXX_TIPO.py`, sin incorporar la versión del documento. Los tipos son `NO_ADMITIDO`, `FORMA_ESPERADA` y, cuando corresponda, `ALTERNATIVA`.
 
-El HTML académico es la fuente del contenido: los archivos `.py` se derivan de sus bloques `pre`, no los reinterpretan ni los sustituyen. `manifest.json` registra código documental, ejemplo, variante, ubicación, procedencia, hash y enlaces; `configuracion_publicacion.json` centraliza la configuración pública sin credenciales. Las utilidades de `herramientas/` permiten extraer, validar y preparar enlaces.
+El HTML académico es la fuente del contenido: los archivos `.py` conservan el bloque `pre` correspondiente y pueden completarlo solo con el contexto mínimo necesario para ejecutarse. Todo código Python ofrecido para descarga debe ser autónomo, ejecutable y estar validado mediante una ejecución real. Los fragmentos académicos deben completarse con el contexto mínimo necesario, sin alterar el concepto que ilustran. `manifest.json` registra código documental, ejemplo, variante, ubicación, procedencia, hash, ejecución y enlaces; `configuracion_publicacion.json` centraliza la configuración pública sin credenciales. Las utilidades de `herramientas/` permiten extraer, validar y preparar enlaces.
 
 Para un documento que contenga ejemplos, verificar primero sin escribir:
 
 ```text
 python herramientas/extraer_codigos.py --manifest manifest.json --root . --html IG.A.NN_Titulo_del_documento_vX.Y.html --document-code IG.A.NN
-python herramientas/validar_codigos.py --manifest manifest.json --root . --html IG.A.NN_Titulo_del_documento_vX.Y.html --document-code IG.A.NN
+python herramientas/validar_codigos.py --manifest manifest.json --root . --html IG.A.NN_Titulo_del_documento_vX.Y.html --document-code IG.A.NN --run
 python herramientas/validar_enlaces.py --manifest manifest.json --config configuracion_publicacion.json --root .
 ```
 

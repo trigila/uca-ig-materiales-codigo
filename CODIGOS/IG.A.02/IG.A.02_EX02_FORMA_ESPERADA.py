@@ -9,3 +9,9 @@ def evaluar_monto(monto):
         resultado = "Aprobado"
         
     return resultado  # Único return al final de la función
+
+
+monto_de_prueba = 1200
+resultado = evaluar_monto(monto_de_prueba)
+print("Monto de prueba:", monto_de_prueba)
+print("Resultado:", resultado)
