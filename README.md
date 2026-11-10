@@ -71,11 +71,11 @@ python herramientas/validar_codigos.py --manifest manifest.json --root . --html 
 python herramientas/validar_enlaces.py --manifest manifest.json --config configuracion_publicacion.json --root .
 ```
 
-Los enlaces de descarga del manifiesto apuntan de forma estable al contenido de los `.py` en la rama `main`; no usan Releases ni identificadores de commit. Al publicar un cambio en un `.py`, su misma URL entrega el contenido actualizado. Las Releases históricas se conservan como referencia, pero no forman parte del procedimiento habitual. Para producir una copia con enlaces, usar `actualizar_enlaces_html.py`; no insertar URLs directamente en un HTML académico aprobado ni sobrescribir el original. La copia y su PDF son artefactos de prueba y no modifican la versión ni los metadatos del documento público.
+Los enlaces de descarga del manifiesto apuntan a los assets de la Release técnica fija `codigos-actuales`. Cada URL conserva el nombre del `.py` y fuerza su descarga directa, sin mostrar la interfaz de GitHub. El workflow `.github/workflows/actualizar_codigos_actuales.yml` se ejecuta al publicar cambios en `CODIGOS/**/*.py`: crea la Release si falta o actualiza sus assets sin cambiar el tag ni los enlaces. Las Releases históricas se conservan como referencia y no se modifican. Para producir una copia con enlaces, usar `actualizar_enlaces_html.py`; no insertar URLs directamente en un HTML académico aprobado ni sobrescribir el original. La copia y su PDF son artefactos de prueba y no modifican la versión ni los metadatos del documento público.
 
-GitHub puede servir un archivo Python como texto plano en el navegador. El enlace conserva el nombre `.py` y declara la descarga; si el navegador lo abre como texto, usar **Guardar enlace como…** o **Guardar como…** para conservar el nombre y la extensión que figuran al final de la URL.
+La Release técnica entrega los assets con el nombre y la extensión `.py` correctos. Después de modificar códigos, el procedimiento es validar, hacer `commit + push` y esperar la finalización del workflow; no se crean Releases nuevas ni se actualizan enlaces del HTML o del PDF.
 
-Antes de cualquier commit o publicación, ejecutar `herramientas/preparar_publicacion.py` y revisar el alcance. No mover, eliminar ni renombrar un `.py` ya referenciado por un PDF sin autorización explícita. El historial Git es el mecanismo de seguimiento técnico; las rutas estables de descarga dependen solo de la rama `main`, no de futuras versiones de los PDF ni de Releases.
+Antes de cualquier commit o publicación, ejecutar `herramientas/preparar_publicacion.py` y revisar el alcance. No mover, eliminar ni renombrar un `.py` ya referenciado por un PDF sin autorización explícita. El historial Git es el mecanismo de seguimiento técnico; las rutas estables de descarga dependen solo del tag fijo `codigos-actuales`, no de futuras versiones de los PDF ni de commits.
 
 ---
 

@@ -1,0 +1,47 @@
+name: Actualizar codigos actuales
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "CODIGOS/**/*.py"
+      - ".github/workflows/actualizar_codigos_actuales.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: codigos-actuales
+  cancel-in-progress: false
+
+jobs:
+  publicar-codigos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Crear o actualizar la Release tecnica
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          etiqueta="codigos-actuales"
+          mapfile -d '' archivos < <(find CODIGOS -type f -name '*.py' -print0)
+
+          if [[ ${#archivos[@]} -eq 0 ]]; then
+            echo "No se encontraron archivos Python para publicar."
+            exit 1
+          fi
+
+          if gh release view "$etiqueta" >/dev/null 2>&1; then
+            gh release upload "$etiqueta" "${archivos[@]}" --clobber
+          else
+            gh release create "$etiqueta" "${archivos[@]}" \
+              --title "Códigos actuales" \
+              --notes "Assets técnicos actualizados automáticamente desde main." \
+              --prerelease
+          fi

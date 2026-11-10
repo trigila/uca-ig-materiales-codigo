@@ -67,7 +67,7 @@ Usar horario de Argentina (`America/Argentina/Buenos_Aires`, UTC−03:00) y obte
 - Los `.py` conservan el bloque `pre` del HTML académico y pueden agregar solo el contexto mínimo necesario para funcionar como programas completos. Mantener UTF-8, cuatro espacios por nivel y ausencia de tabulaciones. No corregir silenciosamente ni convertir un ejemplo `NO_ADMITIDO` en una `FORMA_ESPERADA`.
 - Todo código Python ofrecido para descarga debe ser autónomo, ejecutable y estar validado mediante una ejecución real. Los fragmentos académicos deben completarse con el contexto mínimo necesario, sin alterar el concepto que ilustran.
 - Registrar en el manifiesto la procedencia, dependencias, hash, clasificación y comprobación de ejecución de cada descarga. No inventar datos ajenos al concepto académico para volver autónomo a un fragmento.
-- `configuracion_publicacion.json` no contiene credenciales. Los enlaces de descarga usan rutas raw estables a los `.py` de la rama `main`, sin Releases ni identificadores de commit; tras publicar un cambio en un `.py`, su misma URL debe entregar el contenido actualizado. Conservar las Releases históricas sin incorporarlas al procedimiento habitual. Si un navegador abre el Python como texto, indicar **Guardar enlace como…** o **Guardar como…**; el nombre y la extensión provienen del final de la URL. Para enlaces en documentos, generar una copia HTML mediante `herramientas/actualizar_enlaces_html.py`, salvo que el usuario autorice expresamente actualizar el HTML definitivo.
+- `configuracion_publicacion.json` no contiene credenciales. Los enlaces de descarga usan los assets de la Release técnica fija `codigos-actuales`; cada URL conserva el nombre del `.py` y descarga el archivo directamente. El workflow `.github/workflows/actualizar_codigos_actuales.yml` crea o actualiza esos assets cuando se publica un cambio en `CODIGOS/**/*.py`, sin crear una Release por modificación ni cambiar enlaces del HTML o PDF. Conservar las Releases históricas sin modificarlas. Para enlaces en documentos, generar una copia HTML mediante `herramientas/actualizar_enlaces_html.py`, salvo que el usuario autorice expresamente actualizar el HTML definitivo.
 
 ## 6. Verificación antes de entregar
 
@@ -87,7 +87,7 @@ Cuando se solicite o sea posible generarlo, renderizar con Chromium, Chrome o Ed
 
 - Ejecutar `herramientas/extraer_codigos.py` sin `--write` para detectar diferencias antes de sincronizar un `.py` con su HTML.
 - Ejecutar `herramientas/validar_codigos.py --run` para comprobar nombres, UTF-8, ausencia de tabulaciones, sintaxis Python, hash, conservación del bloque `pre` y ejecución real con salida esperada.
-- Ejecutar `herramientas/validar_enlaces.py` para comprobar enlaces configurados; después de un `push` autorizado, usar `--check-downloads` para verificar el contenido, hash y nombre de los `.py` publicados en `main`.
+- Ejecutar `herramientas/validar_enlaces.py` para comprobar enlaces configurados; después de la finalización del workflow de `codigos-actuales`, usar `--check-downloads` para verificar el contenido, hash y nombre de los `.py` publicados.
 - Antes de un commit o una publicación, ejecutar `herramientas/preparar_publicacion.py`. No crear commits ni hacer `push` sin instrucción expresa del usuario; antes de un `push`, informar remoto, rama y commits concretos.
 
 ### Regla permanente: «commit + push»
@@ -96,7 +96,7 @@ Cuando el usuario indique explícitamente `commit + push`, se considera autoriza
 
 1. Revisar `git status` y el diff completo, incluyendo archivos nuevos, modificados, renombrados y eliminados.
 2. Validar el contenido conforme a su tipo y ejecutar las comprobaciones disponibles antes de incorporar los cambios.
-3. Incluir todos los archivos legítimos del proyecto, incluidos los documentos oficiales generados y validados y los `.py` pertinentes; no requerir que el usuario enumere cada ruta. Los enlaces raw estables a `main` no se modifican cuando cambia un programa: se verifica que entreguen su contenido actualizado después del push.
+3. Incluir todos los archivos legítimos del proyecto, incluidos los documentos oficiales generados y validados y los `.py` pertinentes; no requerir que el usuario enumere cada ruta. Los enlaces de la Release fija `codigos-actuales` no se modifican cuando cambia un programa: se espera el workflow y se verifica que entreguen su contenido actualizado después del push.
 4. Excluir archivos temporales, pruebas descartadas, cachés, archivos privados, artefactos sospechosos y cualquier contenido ajeno al proyecto; informar las exclusiones.
 5. Crear un commit descriptivo en inglés, hacer `push` a `origin/main` y verificar que `main` coincida con `origin/main` y que el árbol de trabajo quede limpio.
 

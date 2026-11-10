@@ -28,6 +28,7 @@ def main() -> int:
     link_generation = config.get("link_generation", {})
     view_template = link_generation.get("view_template")
     download_template = link_generation.get("download_template")
+    release_tag = link_generation.get("release_tag")
     pending = 0
 
     for entry in manifest.get("entries", []):
@@ -41,7 +42,12 @@ def main() -> int:
                 raise SystemExit(f"Vista no coincide con la configuración: {entry['relative_path']}.")
         if owner and repo and branch and download_template and download:
             expected = download_template.format(
-                owner=owner, repository=repo, branch=branch, path=entry["relative_path"], filename=entry["file_name"]
+                owner=owner,
+                repository=repo,
+                branch=branch,
+                path=entry["relative_path"],
+                filename=entry["file_name"],
+                release_tag=release_tag,
             )
             if download != expected:
                 raise SystemExit(f"Descarga no coincide con la configuración: {entry['relative_path']}.")

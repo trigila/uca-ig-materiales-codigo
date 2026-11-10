@@ -6,9 +6,11 @@
   },
   "link_generation": {
     "view_template": "https://github.com/{owner}/{repository}/blob/{branch}/{path}",
-    "download_strategy": "github_main_raw",
-    "download_template": "https://raw.githubusercontent.com/{owner}/{repository}/{branch}/{path}",
-    "download_note": "Los enlaces de descarga apuntan de forma permanente al contenido de main. Al publicar un cambio en un .py, la misma URL entrega la versión actual. Las Releases históricas se conservan como referencia y no forman parte del procedimiento habitual."
+    "download_strategy": "github_fixed_release_asset",
+    "download_template": "https://github.com/{owner}/{repository}/releases/download/{release_tag}/{filename}",
+    "release_tag": "codigos-actuales",
+    "release_url": "https://github.com/trigila/uca-ig-materiales-codigo/releases/tag/codigos-actuales",
+    "download_note": "La Release técnica fija codigos-actuales distribuye los .py con URLs permanentes. GitHub Actions actualiza sus assets cuando se publica un cambio en CODIGOS; las Releases históricas se conservan como referencia."
   },
   "html": {
     "anchor_class": "ig-code-download",
